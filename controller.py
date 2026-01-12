@@ -13,7 +13,7 @@ class Controller:
             generated_text = generated_text.split(self.ENDOFTEXT)[0]
         else:
             print("Continuing generation to reach end-of-text token.")
-            generated_text += self.generate_text(prompt, max_tokens=2*max_tokens)
+            generated_text = self.generate_text(prompt, max_tokens=2*max_tokens)
         return generated_text
 
     def predict(self, materia: str, nivel: int) -> str:
